@@ -202,3 +202,19 @@ if ( 2 == '2' ) {
 console.log('------------');
 console.log('CIKLAS');
 console.log('------------');
+
+// eng: loop, ltu: ciklas
+
+const numbers = [0, 5, 8, -17, 87, 125, 56];
+
+// for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+    
+for (let i=0; i<8; i=i+2) {
+    console.log('iteracija');
+}
+for (let i=0; i<numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+console.log('priespaskutinis skaicius: ' + numbers[ numbers.length - 2]);
