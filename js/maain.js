@@ -300,3 +300,94 @@ function tusciaFunkcija() {
 }
 
 console.log( tusciaFunkcija() );
+
+
+console.log('--------------');
+
+// typeof(16165) -> 'number'
+// typeof('tekstas') -> 'string'
+// typeof(true) -> 'boolean'
+// typeof(false) -> 'boolean'
+
+function daugyba( pirmas, antras ) {
+    if ( typeof(pirmas) !== 'number' ) {
+        console.log('Klaida: pirma reiksme nera skaiciaus tipo.');
+        return 'Klaida: pirma reiksme nera skaiciaus tipo.';
+    }
+    if ( typeof(antras) !== 'number' ) {
+        console.log('Klaida: antra reiksme nera skaiciaus tipo.')
+        return 'Klaida: antra reiksme nera skaiciaus tipo.';
+    }
+    if ( typeof(antras) === Infinity ) {
+        console.log('Klaida: antra reiksme nera skaicinegali buti begalybe.')
+        return 'Klaida: antra reiksme nera skaicinegali buti begalybe.';
+    }
+
+    const sandauga = pirmas * antras;
+    console.log(pirmas, '*', antras, '=', sandauga)
+    return sandauga;
+}
+
+const c = 2;
+const d = 3;
+daugyba(c, d);
+
+daugyba(7, 3);
+daugyba('asd', 3);
+daugyba(3, 'asd');
+
+console.log('--------------');
+console.log('skaitmenu kiekis skaiciuje');
+
+function skaitmenuKiekisSkaiciuje( skaicius) {
+    if ( typeof(skaicius) !=='number') {
+        return 'Klaida: reiksme nera skaiciaus tipo.';
+    }
+    if ( isNaN(skaicius) ) {
+        return 'Klaida: reiksme turi buti normalus skaicius.';
+    }
+    if ( isFinite(skaicius) === false ) {
+        return 'Klaida: reiksme turi buti normalus skaicius.';
+    }
+
+    let kiekis1=0;
+
+
+    //logika
+    console.log(skaicius, '->', kiekis)
+    return kiekis1;
+}
+
+console.log( skaitmenuKiekisSkaiciuje( 5 ) );
+console.log( skaitmenuKiekisSkaiciuje( 781 ) );
+console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
+console.log( skaitmenuKiekisSkaiciuje( true ) );
+console.log( skaitmenuKiekisSkaiciuje( "asd" ) );
+
+
+
+
+let skaicius1 = 37060123456;
+let tekstinisskaicius = '' + skaicius1;
+console.log(tekstinisskaicius.length);
+
+
+console.log('--------------');
+console.log('didziausias Skaicius Sarase');
+
+function didziausiasSkaiciusSarase( list ) {
+    let didziausias = 0;
+
+    //logika
+
+    return didziausias;
+}
+
+console.log( didziausiasSkaiciusSarase( [ 1 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
+console.log( didziausiasSkaiciusSarase( "pomidoras" ) );
+console.log( didziausiasSkaiciusSarase( [] ) );
+
