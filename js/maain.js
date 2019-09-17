@@ -218,3 +218,85 @@ for (let i=0; i<numbers.length; i++) {
 }
 
 console.log('priespaskutinis skaicius: ' + numbers[ numbers.length - 2]);
+
+const txt='abcdef';
+let atbulas = '';
+for (let i=txt.length-1; i>=0; i--) {
+    console.log(txt[i]);
+    atbulas= atbulas + txt[i];
+}
+console.log( atbulas );
+
+
+const pazymiai = [10, 8, 5, 2, 4, 7];
+let sum = 0;
+for (let i=0; i<pazymiai.length; i++) {
+    sum = sum + pazymiai[i];
+}
+console.log( sum / pazymiai.length );
+
+const nuo = 0;
+const iki = 11;
+const daliklis = 5;
+let kartai = 0;
+
+for (let i=nuo; i<=iki; i++) {
+    if ( i%daliklis === 0 ) {
+        kartai++;
+    }
+}
+console.log('Skaičių intervale tarp ' + nuo + ' ir ' +iki+', besidalinančių be liekanos iš ' + daliklis + ' yra ' +kartai+ ' vienetai.')
+
+const nuo1 = 574;
+const iki1 = 815;
+let sumavimas = 0;
+for (let i=nuo1; i<=iki1; i++) {
+    sumavimas = sumavimas + i;
+}
+console.log('-----------');
+console.log( sumavimas );
+console.log('-----------');
+
+
+
+function dalyba(from, untill, divide) {
+    let times = 0;
+
+    for (let i=from; i<=untill; i++) {
+        if ( i%divide === 0 ) {
+            times++;
+        }
+    }
+    return times;
+}
+
+console.log( dalyba(0, 11, 3) );
+console.log( dalyba(0, 11, 5) );
+console.log( dalyba(0, 11, 7) );
+
+console.log( dalyba(0, 11, 3) );
+console.log( dalyba(0, 11, 5) );
+console.log( dalyba(0, 11, 7) );
+
+
+
+
+function vidurkis(pazymiai) {
+    let sum = 0;
+    for (let i=0; i<pazymiai.length; i++) {
+        sum = sum + pazymiai[i];
+    }
+    return sum / pazymiai.length;
+}
+
+console.log( vidurkis([1, 2, 3]));
+
+console.log('--------------');
+console.log('FUNKCIJOS');
+console.log('--------------');
+
+function tusciaFunkcija() {
+    return false;
+}
+
+console.log( tusciaFunkcija() );
