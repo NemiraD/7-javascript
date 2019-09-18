@@ -339,30 +339,32 @@ daugyba(3, 'asd');
 console.log('--------------');
 console.log('skaitmenu kiekis skaiciuje');
 
-function skaitmenuKiekisSkaiciuje( skaicius) {
-    if ( typeof(skaicius) !=='number') {
-        return 'Klaida: reiksme nera skaiciaus tipo.';
-    }
-    if ( isNaN(skaicius) ) {
-        return 'Klaida: reiksme turi buti normalus skaicius.';
-    }
-    if ( isFinite(skaicius) === false ) {
-        return 'Klaida: reiksme turi buti normalus skaicius.';
-    }
+// function skaitmenuKiekisSkaiciuje( skaicius) {
+//     if ( typeof(skaicius) !=='number') {
+//         console.log('Klaida: reiksme nera skaiciaus tipo.');
+//         return 'Klaida: reiksme nera skaiciaus tipo.';
+//     }
+//     if ( isNaN(skaicius) ) {
+//         console.log('Klaida: reiksme nera skaiciaus tipo.');
+//         return 'Klaida: reiksme turi buti normalus skaicius.';
+//     }
+//     if ( isFinite(skaicius) === false ) {
+//         console.log('Klaida: reiksme nera skaiciaus tipo.');
+//         return 'Klaida: reiksme turi buti normalus skaicius.';
+//     }
 
-    let kiekis1=0;
+//     let kiekis1=0;
 
 
-    //logika
-    console.log(skaicius, '->', kiekis)
-    return kiekis1;
-}
-
-console.log( skaitmenuKiekisSkaiciuje( 5 ) );
-console.log( skaitmenuKiekisSkaiciuje( 781 ) );
-console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
-console.log( skaitmenuKiekisSkaiciuje( true ) );
-console.log( skaitmenuKiekisSkaiciuje( "asd" ) );
+//     //logika
+//     console.log(skaicius, '->', kiekis)
+//     return kiekis1;
+// }
+// skaitmenuKiekisSkaiciuje( 5 );
+// skaitmenuKiekisSkaiciuje( 781 );
+// skaitmenuKiekisSkaiciuje( 37060123456 );
+// skaitmenuKiekisSkaiciuje( true );
+// skaitmenuKiekisSkaiciuje( "asd" );
 
 
 
@@ -390,4 +392,36 @@ console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
 console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
 console.log( didziausiasSkaiciusSarase( "pomidoras" ) );
 console.log( didziausiasSkaiciusSarase( [] ) );
+
+console.log('--------------');
+console.log('Isrinkti Raides');
+
+function isrinktiRaides( tekstas, zingsnis ) {
+    if ( typeof(tekstas !== 'string') ) {
+        console.log('Pirmasis kintamasis yra netinkamo tipo.');
+        return 'Pirmasis kintamasis yra netinkamo tipo.';
+    }
+    if ( tekstas.length === 0 || 
+         tekstas.length > 100 ) {
+        console.log('Pirmojo kintamojo reiksme yra netinkamo dydzio.');
+        return 'Pirmojo kintamojo reiksme yra netinkamo dydzio.';
+    }
+    if ( typeof(zingsnis) !=='number') {
+        console.log('Antrasis kintamasis yra netinkamo tipo.');
+        return 'Antrasis kintamasis yra netinkamo tipo.';
+    }
+    return;
+}
+
+isrinktiRaides( 1561, 2 );
+isrinktiRaides( '', 2 );
+isrinktiRaides( 'abcdefg', 'ad' );
+isrinktiRaides( 'abc', 0 );
+isrinktiRaides( 'abc', 4 );
+
+isrinktiRaides( 'abcdefg', 2 );
+isrinktiRaides( 'abcdefghijkl', 3 );
+
+
+
 
