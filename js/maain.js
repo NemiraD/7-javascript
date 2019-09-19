@@ -540,3 +540,67 @@ isrinktiRaides( 'abcdefg', 2 );
 isrinktiRaides( 'abcdefg', -2 );
 isrinktiRaides( 'abcdefghijkl', 3 );
 isrinktiRaides( 'abcdefghijkl', -3 ); 
+
+console.log('--------------');
+console.log('Dalyba');
+
+function dalyba( pirmas, antras ) {
+    if ( typeof(pirmas) !== 'number' ) {
+        console.log('Klaida: pirma reiksme nera skaiciaus tipo.');
+        return 'Klaida: pirma reiksme nera skaiciaus tipo.';
+    }
+    if ( typeof(antras) !== 'number' ) {
+        console.log('Klaida: antra reiksme nera skaiciaus tipo.')
+        return 'Klaida: antra reiksme nera skaiciaus tipo.';
+    }
+    if ( pirmas === Infinity ) {
+        console.log('Klaida: pirmas reiksme negali buti begalybe.');
+        return 'Klaida: pirmas reiksme negali buti begalybe.';
+    }
+    if ( antras === Infinity ) {
+        console.log('Klaida: antras reiksme negali buti begalybe.');
+        return 'Klaida: antras reiksme negali buti begalybe.';
+    }
+    if ( ''+pirmas === 'NaN' ) {
+        console.log('Klaida: pirmas reiksme negali buti NaN.');
+        return 'Klaida: pirmas reiksme negali buti NaN.';
+    }
+    if ( ''+antras === 'NaN' ) {
+        console.log('Klaida: antras reiksme negali buti NaN.');
+        return 'Klaida: antras reiksme negali buti NaN.';
+    }
+    if ( ''+antras === 'NaN' ) {
+        console.log('Klaida: antras reiksme negali buti NaN.');
+        return 'Klaida: antras reiksme negali buti NaN.';
+    }
+    if ( antras === 0 ) {
+        console.log('Klaida: dalyba is nulio negalima.');
+        return 'Klaida: dalyba is nulio negalima.';
+    }
+    const dalyba = pirmas / antras;
+    console.log(pirmas, '*', antras, '=', dalyba)
+    return dalyba;
+}
+
+// const c = 2;
+// const d = 3;
+// dalyba(c, d);
+
+dalyba(9, 3);
+dalyba('asd', 3);
+dalyba(3, 'asd');
+dalyba(0, Infinity);
+dalyba(Infinity, 8);
+dalyba(0, NaN);
+dalyba(NaN, 8);
+dalyba(-8, -0.5);
+dalyba(-8, 0.5);
+dalyba(-0.362, 0.5);
+dalyba(1, 4511561);
+dalyba(1, 0.4511561);
+dalyba(1, 12345678901234567890123456789);
+dalyba(1, 0.12345678901234567890123456789);
+dalyba(Math.PI, Math.E);
+dalyba(0, 3);
+dalyba(3, 0);
+
