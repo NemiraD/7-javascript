@@ -604,3 +604,19 @@ dalyba(Math.PI, Math.E);
 dalyba(0, 3);
 dalyba(3, 0);
 
+console.log('------------')
+let nums = [2, 7, 11, 15];
+let target = 9;
+
+function twoSum(nums, target) {
+    for ( let i=0; i<nums.length; i++ ) {
+        const find = target - nums[i];
+        for ( let j=i+1; j<nums.length; j++ ) {
+            if ( j === find ) {
+                return [i, j];
+            }
+        }
+    }
+};
+
+twoSum( [2, 7, 11, 15], 9 );
